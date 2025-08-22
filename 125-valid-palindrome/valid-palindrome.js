@@ -6,10 +6,5 @@ var isPalindrome = function(s) {
     let str = s.toLowerCase().split(" ").join("")
     .replace(/[^a-z0-9]/gi, "");
     let rev=str.split("").reverse().join("")
-    if(str===rev){
-        return true;
-    }else{
-        return false
-    }
-    
+    return str===rev;
 };
