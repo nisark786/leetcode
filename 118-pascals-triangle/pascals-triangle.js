@@ -5,13 +5,13 @@
 var generate = function(numRows) {
     let triangle = [];
 
-    for (let row = 0; row < numRows; row++) {
-        triangle[row] = [];
-        triangle[row][0] = 1; // first element
-        triangle[row][row] = 1; // last element
+    for (let i = 0; i < numRows; i++) {
+        triangle[i] = [];
+        triangle[i][0] = 1; // first element
+        triangle[i][i] = 1; // last element
 
-        for (let col = 1; col < row; col++) {
-            triangle[row][col] = triangle[row-1][col-1] + triangle[row-1][col];
+        for (let j = 1; j < i; j++) {
+            triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
         }
     }
 
