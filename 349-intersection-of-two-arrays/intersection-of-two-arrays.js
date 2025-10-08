@@ -5,8 +5,10 @@
  */
 var intersection = function(nums1, nums2) {
     let result = [];
-    for(let i of nums1){
-        if(nums2.includes(i) && !result.includes(i)){
+    let iter = nums1.length>=nums2.length ? nums1 : nums2;
+    let not = nums1.length>=nums2.length ? nums2 : nums1;
+    for(let i of iter){
+        if(not.includes(i) && !result.includes(i)){
             result.push(i);
         }
     }
