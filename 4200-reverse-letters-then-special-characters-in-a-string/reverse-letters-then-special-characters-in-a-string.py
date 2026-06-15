@@ -5,7 +5,7 @@ class Solution:
         a= 0
         b= 0
         letter = []
-        result = []
+        result = ""
         for i in range(len(s)-1,-1,-1):
             if s[i] in charecters:
                 special.append(s[i])
@@ -13,12 +13,9 @@ class Solution:
                 letter.append(s[i])
         for i in range(len(s)):
             if s[i] in charecters:
-                result.append(special[a])
+                result+=special[a]
                 a +=1
             else:
-                result.append(letter[b])
+                result+=letter[b]
                 b+=1
-        final = ""
-        for i in range(len(result)):
-            final+=result[i]
-        return final
+        return result
